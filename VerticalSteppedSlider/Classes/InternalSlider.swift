@@ -14,7 +14,7 @@ class InternalSlider: UISlider {
     
     var roundedValue: Float {
         get {
-            return round(super.value, to: increment)
+            return round(value, to: increment)
         }
     }
     
@@ -40,7 +40,7 @@ class InternalSlider: UISlider {
     }
     
     @objc private func endSliding() {
-        setValue(round(super.value, to: increment), animated: true)
+        setValue(round(value, to: increment), animated: true)
         sendActions(for: .valueChanged)
     }
 }

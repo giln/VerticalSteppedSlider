@@ -272,10 +272,6 @@ public class VSSlider: UIControl {
         }
     }
     
-    override public func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
-        slider.addTarget(target, action: action, for: controlEvents)
-    }
-    
     public override func draw(_ rect: CGRect) {
         // Redraw track images if the slider size has changed
         if slider.bounds.size != lastDrawnSliderSize {
