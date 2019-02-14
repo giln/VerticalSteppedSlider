@@ -220,7 +220,7 @@ public class VSSlider: UIControl {
         } else if #available(iOS 9.0, *) {
             layoutDirection = UIView.userInterfaceLayoutDirection(for: slider.semanticContentAttribute)
         } else {
-            layoutDirection = UIApplication.shared.userInterfaceLayoutDirection
+            layoutDirection = .leftToRight
         }
         
         switch (vertical, ascending, layoutDirection) {
